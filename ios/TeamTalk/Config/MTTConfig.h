@@ -28,6 +28,8 @@
 #define IM_PDU_HEADER_LEN   16
 #define IM_PDU_VERSION      13
 
-#define SERVER_ADDR                             @"http://61.153.100.221:8080/msg_server"
+//  填充服务器地址
+#warning LOOK ME!!! ❌   -> 去 http://teamtalk.p52.cn 注册然后获取用户名、密码
+#define SERVER_ADDR                             @"http://teamtalk.p52.cn:5000/msg_server"
 
 #define _(x)                                NSLocalizedString(x,@"")
