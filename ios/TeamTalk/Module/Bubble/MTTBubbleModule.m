@@ -78,7 +78,7 @@
         NSString* picBgImagePath;
         
         NSData* data = [NSData dataWithContentsOfFile:string];
-        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSDictionary* dic = data?[NSJSONSerialization JSONObjectWithData:data options:0 error:nil]:@{};
         
         MTTBubbleContentInset insetTemp;
         insetTemp.top = [dic[@"contentInset"][@"top"] floatValue];
