@@ -88,7 +88,7 @@ static NSUInteger const showPromptGap = 300;
 }
 -(void)loadHisToryMessageFromServer:(NSUInteger)FromMsgID loadCount:(NSUInteger)count Completion:(DDChatLoadMoreHistoryCompletion)completion
 {
-    if (self.MTTSessionEntity) {
+    if (self.MTTSessionEntity && self.MTTSessionEntity.sessionID) {
         if (FromMsgID !=1) {
             [[DDMessageModule shareInstance] getMessageFromServer:FromMsgID currentSession:self.MTTSessionEntity count:count Block:^(NSArray *response, NSError *error) {
                 //[self p_addHistoryMessages:response Completion:completion];
