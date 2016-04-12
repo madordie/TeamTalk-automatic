@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32FFF7891CBCF69600439271 /* bubble.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 32FFF7881CBCF69600439271 /* bubble.bundle */; };
 		6802F6EF490DEE71C0552E98 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7C945FDB2D00B8D439C777 /* libPods.a */; };
 		810D52181B50ECFA004DF7B4 /* bgImage_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 810D52141B50ECFA004DF7B4 /* bgImage_HL@2x.png */; };
 		810D52191B50ECFA004DF7B4 /* cellLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 810D52151B50ECFA004DF7B4 /* cellLine@2x.png */; };
@@ -411,6 +412,7 @@
 
 /* Begin PBXFileReference section */
 		03A854D4EB4F75C40944178C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		32FFF7881CBCF69600439271 /* bubble.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = bubble.bundle; sourceTree = "<group>"; };
 		810D52141B50ECFA004DF7B4 /* bgImage_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgImage_HL@2x.png"; sourceTree = "<group>"; };
 		810D52151B50ECFA004DF7B4 /* cellLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellLine@2x.png"; sourceTree = "<group>"; };
 		810D52161B50ECFA004DF7B4 /* LCActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCActionSheet.h; sourceTree = "<group>"; };
@@ -1627,6 +1629,7 @@
 		C07E646C1B3280BB00A5102C /* Bundle */ = {
 			isa = PBXGroup;
 			children = (
+				32FFF7881CBCF69600439271 /* bubble.bundle */,
 				C07E646D1B3280BB00A5102C /* emotions.bundle */,
 			);
 			path = Bundle;
@@ -2592,6 +2595,7 @@
 				C07E65861B3283FB00A5102C /* loginlogo.png in Resources */,
 				C07E654A1B3283FB00A5102C /* dd_emotion.png in Resources */,
 				C07E65791B3283FB00A5102C /* delete@2x.png in Resources */,
+				32FFF7891CBCF69600439271 /* bubble.bundle in Resources */,
 				C07E655B1B3283FB00A5102C /* dd_press_to_say_normal@2x.png in Resources */,
 				C07E653E1B3283FB00A5102C /* contact.png in Resources */,
 				C07E658B1B3283FB00A5102C /* password.png in Resources */,
