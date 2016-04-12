@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MTTLoginViewController">
             <connections>
+                <outlet property="TTServerHost" destination="FVf-Wz-Upg" id="kLh-lb-szK"/>
                 <outlet property="userLoginBtn" destination="zO8-09-BqU" id="5Be-ns-gUY"/>
                 <outlet property="userNameTextField" destination="OJa-cj-8se" id="1XV-fF-h8m"/>
                 <outlet property="userPassTextField" destination="qzu-xr-nVp" id="XSY-7q-dvh"/>
@@ -70,7 +71,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="1na-rl-GvH">
-                    <rect key="frame" x="95" y="100" width="130" height="130"/>
+                    <rect key="frame" x="95" y="72" width="130" height="130"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="130" id="C0P-0Q-kRV"/>
                         <constraint firstAttribute="width" secondItem="1na-rl-GvH" secondAttribute="height" multiplier="1:1" id="E3m-E4-NQ1"/>
@@ -85,17 +86,30 @@
                         </mask>
                     </variation>
                 </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://teamtalk.p52.cn:5000/msg_server" placeholder="TT 服务器地址" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FVf-Wz-Upg">
+                    <rect key="frame" x="15" y="217" width="290" height="45"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="290" id="bCM-VM-Plp"/>
+                        <constraint firstAttribute="height" constant="45" id="nJU-CL-Eue"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="cui-GK-nTH" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="3GV-TX-cBk"/>
                 <constraint firstAttribute="bottom" secondItem="zO8-09-BqU" secondAttribute="bottom" constant="54" id="7KL-54-Ome"/>
+                <constraint firstItem="OJa-cj-8se" firstAttribute="height" secondItem="FVf-Wz-Upg" secondAttribute="height" id="7vK-2n-Yxp"/>
                 <constraint firstAttribute="centerX" secondItem="zO8-09-BqU" secondAttribute="centerX" id="Buy-vD-xck"/>
-                <constraint firstItem="OJa-cj-8se" firstAttribute="top" secondItem="1na-rl-GvH" secondAttribute="bottom" constant="50" id="DM3-Lr-f6i"/>
                 <constraint firstAttribute="centerX" secondItem="qzu-xr-nVp" secondAttribute="centerX" id="IQJ-Nl-gDL"/>
                 <constraint firstAttribute="bottom" secondItem="cui-GK-nTH" secondAttribute="bottom" id="Mqk-KD-Nrc"/>
                 <constraint firstItem="qzu-xr-nVp" firstAttribute="top" secondItem="OJa-cj-8se" secondAttribute="bottom" constant="15" id="NVG-Sh-S9C"/>
+                <constraint firstItem="OJa-cj-8se" firstAttribute="width" secondItem="FVf-Wz-Upg" secondAttribute="width" id="Qvy-Na-G4o"/>
+                <constraint firstItem="FVf-Wz-Upg" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="R10-Dt-jde"/>
                 <constraint firstAttribute="centerX" secondItem="OJa-cj-8se" secondAttribute="centerX" id="RuG-ph-rfg"/>
+                <constraint firstItem="FVf-Wz-Upg" firstAttribute="top" secondItem="1na-rl-GvH" secondAttribute="bottom" constant="15" id="URo-Mc-4Fh"/>
                 <constraint firstItem="zO8-09-BqU" firstAttribute="top" secondItem="qzu-xr-nVp" secondAttribute="bottom" constant="20" id="cgj-Fr-nR1"/>
                 <constraint firstAttribute="centerX" secondItem="1na-rl-GvH" secondAttribute="centerX" id="fJi-M1-7Jk"/>
                 <constraint firstAttribute="trailing" secondItem="cui-GK-nTH" secondAttribute="trailing" constant="1" id="g2d-fh-DK6"/>
@@ -103,7 +117,8 @@
                 <constraint firstItem="cui-GK-nTH" firstAttribute="top" secondItem="1" secondAttribute="top" id="j5N-Aq-5yE"/>
                 <constraint firstItem="zO8-09-BqU" firstAttribute="top" secondItem="qzu-xr-nVp" secondAttribute="bottom" constant="20" id="rU6-q8-HfE"/>
                 <constraint firstItem="OJa-cj-8se" firstAttribute="top" secondItem="1na-rl-GvH" secondAttribute="bottom" constant="50" id="wTB-EF-V5O"/>
-                <constraint firstItem="1na-rl-GvH" firstAttribute="top" secondItem="1" secondAttribute="top" constant="100" id="yhl-vh-kvX"/>
+                <constraint firstItem="OJa-cj-8se" firstAttribute="top" secondItem="FVf-Wz-Upg" secondAttribute="bottom" constant="18" id="xj9-0b-Sp8"/>
+                <constraint firstItem="1na-rl-GvH" firstAttribute="top" secondItem="1" secondAttribute="top" constant="72" id="yhl-vh-kvX"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

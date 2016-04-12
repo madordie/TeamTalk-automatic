@@ -10,6 +10,8 @@
 
 @interface DDHttpServer : NSObject
 
+@property (nonatomic, copy) NSString *server_addr;
+
 /**
  *  登录Http服务器
  *

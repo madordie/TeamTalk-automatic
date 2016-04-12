@@ -17,6 +17,8 @@
 
 @property(assign)CGPoint defaultCenter;
 
+@property (weak, nonatomic) IBOutlet UITextField *TTServerHost;
+
 @property (nonatomic,weak)IBOutlet UITextField* userNameTextField;
 @property (nonatomic,weak)IBOutlet UITextField* userPassTextField;
 @property (nonatomic,weak)IBOutlet UIButton* userLoginBtn;
@@ -145,8 +147,7 @@
     HUD.labelText = @"正在登录";
     
     SCLAlertView *alert = [SCLAlertView new];
-//    userName = @"铸剑";
-//    password = @"123456";
+    [LoginModule instance].httpServerAddr = self.TTServerHost.text.length?self.TTServerHost.text:SERVER_ADDR;
     [[LoginModule instance] loginWithUsername:userName password:password success:^(MTTUserEntity *user) {
         
         [HUD removeFromSuperview];

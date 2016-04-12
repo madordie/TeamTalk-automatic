@@ -14,7 +14,7 @@
     DDMsgServer* _msgServer;
     DDTcpServer* _tcpServer;
 }
-
+@property (nonatomic, copy) NSString *httpServerAddr;
 @property (nonatomic,readonly)NSString* token;
 + (instancetype)instance;
 

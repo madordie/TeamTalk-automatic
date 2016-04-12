@@ -238,5 +238,10 @@
     }];
     
 }
-
+- (void)setHttpServerAddr:(NSString *)httpServerAddr {
+    _httpServer.server_addr = httpServerAddr.copy;
+}
+- (NSString *)httpServerAddr {
+    return _httpServer.server_addr.copy;
+}
 @end

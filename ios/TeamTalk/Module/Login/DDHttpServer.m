@@ -33,7 +33,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager GET:SERVER_ADDR parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:self.server_addr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
             NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
             block(responseDictionary);
